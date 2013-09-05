@@ -35,4 +35,10 @@
     <form MIME="video/m4v"/>
     <form MIME="video/ogg"/>
   </dsTypeModel>
+  <dsTypeModel ID="TECHMD_SAMMA" optional="true">
+    <form MIME="text/xml"/>
+  </dsTypeModel>
+  <dsTypeModel ID="PDF_SAMMA" optional="true">
+    <form MIME="application/pdf"/>
+  </dsTypeModel> 
 </dsCompositeModel>

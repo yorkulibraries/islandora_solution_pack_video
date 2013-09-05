@@ -43,6 +43,8 @@
     <datastream dsid="OGG"/>
     <datastream dsid="TN"/>
     <datastream dsid="FULL_SIZE"/>
+    <datastream dsid="PDF_SAMMA"/>
+    <datastream dsid="TECHMD_SAMMA"/>
   </datastreams>
   <ingest_form dsid="QDC" page="2">
     <form_builder_method class="QtFormBuilder" file="plugins/QtFormBuilder.php" handler="handleQDCForm" method="buildQDCForm" module=""/>
