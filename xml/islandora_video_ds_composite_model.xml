@@ -20,10 +20,7 @@
   <dsTypeModel ID="MODS" optional="true">
     <form FORMAT_URI="http://www.loc.gov/mods/v3" MIME="application/xml"/>
   </dsTypeModel>
-  <dsTypeModel ID="MP4" optional="false">
-    <form MIME="video/mp4"/>
-  </dsTypeModel>
- <dsTypeModel ID="OBJ">
+  <dsTypeModel ID="OBJ" optional="false">
     <form MIME="video/mp4"/>
     <form MIME="video/quicktime"/>
     <form MIME="video/m4v"/>
@@ -40,5 +37,8 @@
   </dsTypeModel>
   <dsTypeModel ID="MKV" optional="false">
     <form MIME="video/x-matroska"/>
+  </dsTypeModel>
+  <dsTypeModel ID="MP4" optional="false">
+    <form MIME="video/mp4"/>
   </dsTypeModel>
 </dsCompositeModel>
