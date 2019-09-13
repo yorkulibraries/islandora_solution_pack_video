@@ -29,7 +29,7 @@ function islandora_video_create_mp4(AbstractObject $object, $force = FALSE) {
     $audio_codec = variable_get('islandora_video_mp4_audio_codec', 'aac');
 
     $ffmpeg_executable = variable_get('islandora_video_ffmpeg_path', 'ffmpeg');
-    $command = "$ffmpeg_executable -i $archival_path -f mp4 -vcodec libx264 -preset medium -acodec $audio_codec -strict -2 -ab 128k -ac 2 -async 1 -movflags faststart $out_file";
+    $command = "$ffmpeg_executable -i $archival_path -f mp4 -vcodec libx264 -preset medium -vf format=yuv420p -acodec $audio_codec -strict -2 -ab 128k -ac 2 -async 1 -movflags faststart $out_file";
     $return_value = FALSE;
     exec($command, $output, $return_value);
     file_delete($archival_file['file']);
@@ -227,7 +227,7 @@ function islandora_video_create_thumbnail(AbstractObject $object, $force = FALSE
  *
  * @see hook_islandora_derivative()
  */
-function islandora_video_add_datastream($object, $datastream_id, $file_uri, $delete_file = TRUE) {
+function islandora_video_add_datastream(AbstractObject $object, $datastream_id, $file_uri, $delete_file = TRUE) {
   try {
     $ingest = !isset($object[$datastream_id]);
     $mime_detector = new MimeDetect();
@@ -289,7 +289,7 @@ function islandora_video_add_datastream($object, $datastream_id, $file_uri, $del
  * @param AbstractObject $object
  *   An AbstractObject representing an object within Fedora.
  *
- * @return array|stdClass
+ * @return array|object
  *   FALSE when the object doesn't have the OBJ, an array otherwise.
  */
 function islandora_video_copy_obj_datastream(AbstractObject $object) {
