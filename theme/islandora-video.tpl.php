@@ -22,7 +22,7 @@
 <div class="islandora-video-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="VideoObject">
   <div class="islandora-video-content-wrapper clearfix">
     <?php if ($islandora_content): ?>
-      <div class="islandora-video-content">
+      <div class="islandora-video-content text-center">
         <?php print $islandora_content; ?>
       </div>
     <?php endif; ?>
